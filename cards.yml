@@ -6,6 +6,6 @@ spring:
     password: "{cipher}b62356d12bd295104376059a2768e014db1fccffbbc6b56823f93d615f1d6b4f"
   jpa:
     show-sql: true
-    sql:
-      init:
-        mode: always
+  sql:
+    init:
+      mode: always
