@@ -1,11 +1,26 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5434/cardsdb
-    driverClassName: org.postgresql.Driver
-    username: "{cipher}b62356d12bd295104376059a2768e014db1fccffbbc6b56823f93d615f1d6b4f"
-    password: "{cipher}b62356d12bd295104376059a2768e014db1fccffbbc6b56823f93d615f1d6b4f"
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: "{cipher}e0df4e671c25af3e35b05be5f0d2a1984978fb593cbaa9a9cf5c9b2a67cd2c72"
+    password:
   jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
-  sql:
-    init:
-      mode: always
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5434/cardsdb
+#    driverClassName: org.postgresql.Driver
+#    username: "{cipher}b62356d12bd295104376059a2768e014db1fccffbbc6b56823f93d615f1d6b4f"
+#    password: "{cipher}b62356d12bd295104376059a2768e014db1fccffbbc6b56823f93d615f1d6b4f"
+#  jpa:
+#    show-sql: true
+#  sql:
+#    init:
+#      mode: always
